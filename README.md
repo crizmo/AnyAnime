@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://www.npmjs.com/package/anyanime">
-    <img src="" alt="Any Anime">
+    <img src="https://media.discordapp.net/attachments/939799133177384993/952452069686644746/Anyanime.png?width=1279&height=196" alt="Any Anime">
   </a>
 </p>
 <p align="center">

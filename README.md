@@ -56,6 +56,6 @@ client.login("TOKEN");
 - [Prefix usage](https://github.com/crizmo/Elina-dev/blob/main/commands/fun/animepfp.js)
 - [Slash Usage](https://github.com/crizmo/Elina-dev/blob/main/src/slash/fun/anyanime.js)
 
-## Huge Thanks to Amista.
+## Huge Thanks To Amista.
 
 [Amista](https://github.com/amistaa)

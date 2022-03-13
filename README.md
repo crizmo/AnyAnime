@@ -35,11 +35,12 @@ const anyanime = require("anyanime");
 const Discord = require("discord.js");
 const client = new Discord.Client();
 client.on("messageCreate", async (message) => {
-  /* Plain Text */
+  /* Plain Image */
   if (message.content === "plain") {
     const anime = anyanime.anime();
     message.channel.send({ embeds: [anime] });
   }
+
   /* Embed Image (D.JS Version 13) */
   if (message.content === "embed") {
     const anime = anyanime.anime();

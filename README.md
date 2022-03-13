@@ -50,6 +50,11 @@ client.on("messageCreate", async (message) => {
 client.login("TOKEN");
 ```
 
+## For more information on how to use it visit
+
+[Prefix usage](https://github.com/crizmo/Elina-dev/blob/main/commands/fun/animepfp.js)
+[Slash Usage](https://github.com/crizmo/Elina-dev/blob/main/src/slash/fun/anyanime.js)
+
 ## Huge Thanks to Amista.
 
 [Amista](https://github.com/amistaa)

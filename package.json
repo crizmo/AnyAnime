@@ -1,0 +1,18 @@
+{
+  "name": "anyanime",
+  "version": "1.1.0",
+  "description": "Generate random anime images.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "anime",
+    "generator",
+    "pfp",
+    "discord",
+    "bot"
+  ],
+  "author": "Criz",
+  "license": "MIT"
+}

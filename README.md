@@ -18,14 +18,19 @@ $ npm install anyanime
 
 | **Options** | **Description**      | **Usage**          |
 | :---------: | -------------------- | ------------------ |
-|    anime    | Random anime images. | `anyanime.anime()` |
+|    anime    | Anime images / pfp . | `anyanime.anime()` |
+
+# Database
+
+- Database images size : 200
+- The database size will be updated tho.
 
 ## Usage
 
 ```javascript
 const anyanime = require("anyanime");
 const anime = anyanime.anime();
-console.log(anime); // Shows random anime image.
+console.log(anime); // Shows random anime pfp image.
 ```
 
 ## Discord Bot
@@ -56,6 +61,6 @@ client.login("TOKEN");
 - [Prefix usage](https://github.com/crizmo/Elina-dev/blob/main/commands/fun/animepfp.js)
 - [Slash Usage](https://github.com/crizmo/Elina-dev/blob/main/src/slash/fun/anyanime.js)
 
-## Huge Thanks To Amista.
+## Huge Thanks To Pinterest.
 
-[Amista](https://github.com/amistaa)
+- For the images ofc !

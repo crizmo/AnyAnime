@@ -20,6 +20,15 @@ $ npm install anyanime
 | :---------: | -------------------- | ------------------ |
 |    anime    | Anime images / pfp . | `anyanime.anime()` |
 
+## Functions
+
+```javascript
+const anyanime = require("anyanime");
+anyanime.checkUpdate(true);
+```
+
+- Search for new npm package updates on bot startup! Latest version will be displayed in console.
+
 # Database
 
 - Database images size : 200
@@ -36,9 +45,12 @@ console.log(anime); // Shows random anime pfp image.
 ## Discord Bot
 
 ```javascript
-const anyanime = require("anyanime");
 const Discord = require("discord.js");
 const client = new Discord.Client();
+
+const anyanime = require("anyanime");
+anyanime.checkUpdate(true);
+
 client.on("messageCreate", async (message) => {
   /* Plain Image */
   if (message.content === "plain") {
@@ -53,6 +65,7 @@ client.on("messageCreate", async (message) => {
     message.channel.send({ embeds: [embed] });
   }
 });
+
 client.login("TOKEN");
 ```
 

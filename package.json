@@ -1,7 +1,7 @@
 {
   "name": "anyanime",
-  "version": "1.2.8",
-  "description": "Generate random anime images.",
+  "version": "1.2.9",
+  "description": "Generate random anime images / pfp .",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

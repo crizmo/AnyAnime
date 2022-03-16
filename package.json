@@ -1,17 +1,26 @@
 {
   "name": "anyanime",
-  "version": "1.2.10",
+  "version": "1.2.11",
   "description": "Generate random anime images / pfp .",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crizmo/AnyAnime.git",
+    "homepage": "https://anyanime-npm.netlify.app"
   },
   "keywords": [
     "anime",
     "generator",
     "pfp",
     "discord",
-    "bot"
+    "bot",
+    "image",
+    "random",
+    "random-pfp",
+    "discord-bot"
   ],
   "author": "Criz",
   "license": "MIT"

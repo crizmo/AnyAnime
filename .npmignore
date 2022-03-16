@@ -1,0 +1,4 @@
+# ignore site for pkg
+index.html
+style.css
+/assets 

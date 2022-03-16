@@ -6,7 +6,9 @@
 <p align="center">
   <a href="https://www.npmjs.com/package/anyanime"><img src="https://img.shields.io/npm/v/anyanime.svg?maxAge=3600" alt="NPM version" /></a>
 </p>
-<h3 align="center"><strong>Get random anime images / pfp . <br>Package Made by: `Criz#1270`. </strong></h3>
+<h3 align="center"><strong>Get random anime images / pfp.</strong></h3>
+
+Package Made by: `Criz#1270`
 
 ## Installation
 

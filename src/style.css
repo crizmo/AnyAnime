@@ -43,6 +43,10 @@ code {
   color: black;
 }
 
+.anyanime p {
+  color: gold;
+}
+
 /*  codes  */
 
 .npm,
@@ -83,10 +87,16 @@ code {
 }
 
 .links a {
-  color: orangered;
+  color: aqua;
   text-decoration: none;
 }
 
 .links a:hover {
   color: yellow;
+}
+
+@media screen and (max-width: 1000px) {
+  .topimg {
+    width: 100%;
+  }
 }

@@ -44,7 +44,7 @@ code {
 }
 
 .anyanime p {
-  color: gold;
+  color: lightskyblue;
 }
 
 /*  codes  */
@@ -99,4 +99,16 @@ code {
   .topimg {
     width: 100%;
   }
+}
+
+/*------Footer------*/
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+.icons .fab {
+  color: violet;
+  margin: 0 20px;
+  padding: 18px 0;
 }

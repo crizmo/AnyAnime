@@ -8,8 +8,6 @@
 </p>
 <h3 align="center"><strong>Get random anime images / pfp.</strong></h3>
 
-Package Made by: `Criz#1270`
-
 ## Installation
 
 ```bash
@@ -84,6 +82,8 @@ If you dont want to use the npm package you can use the api instead.
 - [Github](https://github.com/crizmo/AnyAnime_api)
 
 The installation is given in the [readMe](https://github.com/crizmo/AnyAnime_api/blob/main/README.md) file !
+
+Package Made by: `Criz#1270`
 
 ## Huge Thanks To Pinterest.
 

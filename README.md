@@ -78,7 +78,8 @@ client.login("TOKEN");
 
 If you dont want to use the npm package you can use the api instead.
 
-- [Api](https://anyanime-api.herokuapp.com)
+- [Rapid Api](https://rapidapi.com/Kurizu/api/any-anime/)
+- [Heroku](https://anyanime-api.herokuapp.com)
 - [Github](https://github.com/crizmo/AnyAnime_api)
 
 The installation is given in the [readMe](https://github.com/crizmo/AnyAnime_api/blob/main/README.md) file !

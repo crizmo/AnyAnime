@@ -31,7 +31,7 @@ anyanime.checkUpdate(true);
 
 # Database
 
-- Database images size : 400
+- Database images size : 500
 - The database size will be updated tho.
 
 ## Usage

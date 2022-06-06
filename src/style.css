@@ -30,6 +30,10 @@ code {
   border-radius: 5px;
 }
 
+.written-stuff {
+  font-weight: bold;
+}
+
 /* Center Body */
 
 .functions {
@@ -89,6 +93,7 @@ code {
 .links a {
   color: aqua;
   text-decoration: none;
+  font-weight: 500;
 }
 
 .links a:hover {

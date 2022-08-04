@@ -1,6 +1,6 @@
 {
   "name": "anyanime",
-  "version": "1.2.23",
+  "version": "1.2.24",
   "description": "Generate random anime images / pfp .",
   "main": "index.js",
   "scripts": {

@@ -80,7 +80,7 @@ If you dont want to use the npm package you can use the api instead.
 
 - [Rapid Api](https://rapidapi.com/Kurizu/api/any-anime/)
 - [Heroku](https://anyanime-api.herokuapp.com) -- Might get paid soon.
-- [Replit](https://anyanime-api.kurizu.repl.co)
+- [Replit](https://anyanime-api.kurizu.repl.co/)
 - [Github](https://github.com/crizmo/AnyAnime_api)
 
 The installation is given in the [readMe](https://github.com/crizmo/AnyAnime_api/blob/main/README.md) file !

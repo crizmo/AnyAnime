@@ -3,6 +3,15 @@ const anime = require("../database/anime.json");
 const AnyAnime = () => {
     return {
         anime: () => anime[mathRandom(anime.length)],
+
+        animeBeta: async () => {
+            if (!require('node-fetch')) return;
+            const animee = await require('node-fetch')('https://anyanime-api.kurizu.repl.co/anime').then(text => text.json())
+            const animeImg = animee.stuff[0].image
+            // console.log(animee.stuff[0].image)
+            return animeImg
+        },
+        
         checkUpdate: async () => {
             if (!require('node-fetch')) return;
             const packageData = await require('node-fetch')(`https://registry.npmjs.com/anyanime`).then(text => text.json())

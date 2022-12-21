@@ -1,15 +1,17 @@
-const anime = require("../database/anime.json");
+const axios = require('axios');
 
 const AnyAnime = () => {
     return {
-        anime: () => anime[mathRandom(anime.length)],
-
-        animeBeta: async () => {
-            if (!require('node-fetch')) return;
-            const animee = await require('node-fetch')('https://anyanime-api.kurizu.repl.co/anime').then(text => text.json())
-            const animeImg = animee.stuff[0].image
-            // console.log(animee.stuff[0].image)
-            return animeImg
+        anime: async () => {
+            axios.get('https://anyanime-api.kurizu.repl.co/anime')
+                .then((res) => {
+                    console.log(res.data.stuff[0].image)
+                    const animeImg = res.data.stuff[0].image
+                    return animeImg
+                })
+                .catch((err) => {
+                    console.log(err)
+                })
         },
         
         checkUpdate: async () => {
@@ -27,7 +29,6 @@ const AnyAnime = () => {
                 console.log('\x1b[36m' + '|                    to update!                   |')
                 console.log('\x1b[32m' + '---------------------------------------------------\x1b[37m')
                 console.log('\n\n')
-
             }
         }
     };

@@ -1,8 +1,10 @@
-const axios = require('axios');
+const anime = require("../database/anime.json");
 
 const AnyAnime = () => {
     return {
-        anime: async () => {
+        anime: () => anime[mathRandom(anime.length)],
+
+        animeBeta: async () => {
             axios.get('https://anyanime-api.kurizu.repl.co/anime')
                 .then((res) => {
                     // console.log(res.data.stuff[0].image)
@@ -29,6 +31,7 @@ const AnyAnime = () => {
                 console.log('\x1b[36m' + '|                    to update!                   |')
                 console.log('\x1b[32m' + '---------------------------------------------------\x1b[37m')
                 console.log('\n\n')
+
             }
         }
     };

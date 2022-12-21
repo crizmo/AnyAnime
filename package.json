@@ -23,8 +23,5 @@
     "discord-bot"
   ],
   "author": "Criz",
-  "license": "MIT",
-  "dependencies": {
-    "node-fetch": "^3.3.0"
-  }
+  "license": "MIT"
 }

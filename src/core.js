@@ -1,4 +1,3 @@
-import fetch from 'node-fetch';
 const anime = require("../database/anime.json");
 
 const AnyAnime = () => {

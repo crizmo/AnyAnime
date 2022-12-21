@@ -5,7 +5,7 @@ const AnyAnime = () => {
         anime: async () => {
             axios.get('https://anyanime-api.kurizu.repl.co/anime')
                 .then((res) => {
-                    console.log(res.data.stuff[0].image)
+                    // console.log(res.data.stuff[0].image)
                     const animeImg = res.data.stuff[0].image
                     return animeImg
                 })

@@ -24,6 +24,7 @@ $ npm install anyanime
 
 ```javascript
 const anyanime = require("anyanime");
+await anyanime.anime();
 anyanime.checkUpdate(true);
 ```
 
@@ -38,7 +39,7 @@ anyanime.checkUpdate(true);
 
 ```javascript
 const anyanime = require("anyanime");
-const anime = anyanime.anime();
+const anime = await anyanime.anime();
 console.log(anime); // Shows random anime pfp image.
 ```
 
@@ -54,13 +55,13 @@ anyanime.checkUpdate(true);
 client.on("messageCreate", async (message) => {
   /* Plain Image */
   if (message.content === "plain") {
-    const anime = anyanime.anime();
+    const anime = await anyanime.anime();
     message.channel.send({ embeds: [anime] });
   }
 
   /* Embed Image (D.JS Version 13) */
   if (message.content === "embed") {
-    const anime = anyanime.anime();
+    const anime = await anyanime.anime();
     const embed = new Discord.MessageEmbed().setImage(anime);
     message.channel.send({ embeds: [embed] });
   }
@@ -79,7 +80,6 @@ client.login("TOKEN");
 If you dont want to use the npm package you can use the api instead.
 
 - [Rapid Api](https://rapidapi.com/Kurizu/api/any-anime/)
-- [Heroku](https://anyanime-api.herokuapp.com) -- Might get paid soon.
 - [Replit](https://anyanime-api.kurizu.repl.co/)
 - [Github](https://github.com/crizmo/AnyAnime_api)
 

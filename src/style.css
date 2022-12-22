@@ -1,7 +1,6 @@
 body {
   background-image: url("/assets/animeroad.jpg");
   background-repeat: no-repeat;
-  backdrop-filter: blur(2px);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -112,8 +111,17 @@ code {
   text-align: center;
   padding: 10px 0;
 }
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(37, 37, 37, 0.979);
+  width: max-content;
+  margin: 0 auto;
+  border-radius: 25%;
+}
 .icons .fab {
-  color: violet;
+  color: rgb(117, 107, 255);
   margin: 0 20px;
   padding: 18px 0;
 }

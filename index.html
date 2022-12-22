@@ -54,8 +54,8 @@
             <a href="https://www.npmjs.com/package/anyanime"><img
                     src="https://img.shields.io/npm/v/anyanime.svg?maxAge=3600" alt="NPM version" /></a>
         </p>
-        <h3 align="center"><strong>Get random anime images / pfp .</strong></h3>
-
+        <h3 align="center"><strong style="color: rgb(39, 39, 39);">Get random anime images / pfp .</strong></h3>
+        <hr style="width: 50%; margin: auto; color: rgb(39, 39, 39);">
         <div>
             <h2 align="center">News</h2>
             <section class="functions">
@@ -66,7 +66,7 @@
                     <hr>
                     <p align="center">
                         <p align="center">
-                            What will changes ?
+                            What will change ?
                         </p>
                         - The API will be a little slower ig <br>
                         - The downtime will be completely dependend on replit <br>
@@ -79,6 +79,38 @@
         
                 </code>
             </section>
+
+            <h2 align="center">Update</h2>
+            <section class="functions">
+                <code class="mid">
+                    <p align="center">
+                        Anyanime anime() function is now updated
+                    </p>
+                    <hr>
+                    <p align="center">
+                        <p align="center">
+                            What will change ?
+                        </p>
+                        - The anime() function will now have async await <br>
+        
+                        <hr>
+                        <code>
+                            <span class="const">const</span> <span class="pkg"> anyanime</span> = <span class="require">require</span>("<span class="pkg">anyanime</span>"); <br> <br>
+                            
+                            <span class="comment">// Anime function</span> <br>
+                            <span class="const">async</span> <span class="pkg=">function main() {</span> <br>
+                            &nbsp;&nbsp;<span class="console">console</span>.log(<span class="anime"><span class="require">await</span> <span class="pkg">anyanime</span>.anime()</span>); <br>
+                            <span class="pkg">}</span> <br> <br>
+
+                            <span class="comment">// Check for update</span> <br>
+                            <span class="pkg">anyanime</span>.<span class="anime">checkUpdate(true);</span>
+                            
+                        </code>
+                    </p>
+        
+                </code>
+            </section>
+
             <h2 align="center">Installation</h2>
             <p align="center">
                 <code>
@@ -90,8 +122,15 @@
                 <h2>Functions</h2>
                 <code>
                     <span class="const">const</span> <span class="pkg"> anyanime</span> = <span class="require">require</span>("<span class="pkg">anyanime</span>"); <br> <br>
-                    <span class="pkg">anyanime</span>.<span class="anime">anime();</span> <br>
+                    
+                    <span class="comment">// Anime function</span> <br>
+                    <span class="const">async</span> <span class="pkg=">function main() {</span> <br>
+                    &nbsp;&nbsp;<span class="console">console</span>.log(<span class="anime"><span class="require">await</span> <span class="pkg">anyanime</span>.anime()</span>); <br>
+                    <span class="pkg">}</span> <br> <br>
+
+                    <span class="comment">// Check for update</span> <br>
                     <span class="pkg">anyanime</span>.<span class="anime">checkUpdate(true);</span>
+                    
                 </code>
 
                 <code class="mid">
@@ -110,10 +149,14 @@
 
                 <h2>Usage</h2>
                 <code>
-                    <span class="const">const</span> <span class="pkg"> anyanime</span> = <span class="require">require</span>("<span
-                        class="pkg">anyanime</span>"); <br> <br>
-                    <span class="pkg">anyanime</span>.<span class="anime">anime();</span> <br>
-                    <span class="console">console</span>.log(<span class="anime">anime</span>); <span class="comment">// Shows random anime pfp image.</span>
+                    <code>
+                        <span class="const">const</span> <span class="pkg"> anyanime</span> = <span class="require">require</span>("<span class="pkg">anyanime</span>"); <br> <br>
+                        
+                        <span class="comment">// Anime function</span> <br>
+                        <span class="const">async</span> <span class="pkg=">function main() {</span> <br>
+                        &nbsp;&nbsp;<span class="console">console</span>.log(<span class="anime"><span class="require">await</span> <span class="pkg">anyanime</span>.anime()</span>); <br>
+                        <span class="pkg">}</span> <br>
+                    </code>
                 </code>
 
                 <h2>Discord Bot</h2>
@@ -131,14 +174,14 @@
                     &nbsp;<span class="comment">/* Plain Image */ </span> <br>
 
                     &nbsp;&nbsp;<span class="if">if</span> (<span class="message">message</span>.content === "plain") { <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="const">const </span> <span class="anime">anime</span> = <span class="pkg">anyanime</span>.<span class="anime">anime();</span> <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="const">const </span> <span class="anime">anime</span> = <span class="pkg"><span class="require">await</span> anyanime</span>.<span class="anime">anime();</span> <br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="message">message</span>.<span class="channel">channel</span>.send({ embeds: [<span class="anime">anime</span>] }); <br>
                     &nbsp;&nbsp;} <br> <br>
 
                     &nbsp;<span class="comment">/* Embed Image (D.JS Version 13) */ </span> <br>
 
                     &nbsp;&nbsp;<span class="if">if</span> (<span class="message">message</span>.content === "embed") { <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="const">const </span> <span class="anime">anime</span> = <span class="pkg">anyanime</span>.<span class="anime">anime();</span> <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="const">const </span> <span class="anime">anime</span> = <span class="pkg"><span class="require">await</span> anyanime</span>.<span class="anime">anime();</span> <br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="const">const </span> <span class="embed">embed</span> = <span class="new">new</span> Discord.MessageEmbed().setImage(<span
                         class="anime">anime</span>); <br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="message">message</span>.<span class="channel">channel</span>.send({ embeds: [<span class="embed">embed</span>] }); <br>
@@ -158,7 +201,7 @@
                 <h2>AnyAnime Api</h2>
                 <code>If you dont want to use the npm package you can use the api instead.</code> <br>
                 <div class="links">
-                    <a href="https://anyanime-api.herokuapp.com">Base</a>
+                    <a href="https://anyanime-api.kurizu.repl.co/">Base</a>
                     <br>
                     <a href="https://rapidapi.com/Kurizu/api/any-anime/">Rapid</a> 
                     <br>
@@ -181,7 +224,7 @@
                     </a>
                     <a class="icon gradient fade" aria-label="Discord" target="_blank"
                         href="https://discord.gg/Ecy6WpEZsD">
-                        <i class="fab fa-discord" style="font-size:27px"></i>
+                        <i class="fab fa-discord" style="font-size:27px;"></i>
                     </a>
                     <a class="icon gradient fade" aria-label="Instagram" target="_blank"
                         href="https://www.instagram.com/criz_595/">

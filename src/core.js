@@ -1,12 +1,12 @@
 const anime = require("../database/anime.json");
-const axios = require('axios');
 
 const AnyAnime = () => {
     return {
         anime: () => anime[mathRandom(anime.length)],
 
         animeBeta: async () => {
-            const res = await axios.get('https://anyanime-api.kurizu.repl.co/anime')
+            if (!require('axios')) return;
+            const res = await require('axios').get('https://anyanime-api.kurizu.repl.co/anime')
             return res.data.stuff[0].image
         },
         

@@ -90,13 +90,13 @@ code {
 }
 
 .links a {
-  color: aqua;
+  color: rgb(88, 118, 255);
   text-decoration: none;
   font-weight: 500;
 }
 
 .links a:hover {
-  color: yellow;
+  color: rgb(0, 0, 0);
 }
 
 @media screen and (max-width: 1000px) {

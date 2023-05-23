@@ -19,12 +19,16 @@ $ npm install anyanime
 | **Options** | **Description**      | **Usage**          |
 | :---------: | -------------------- | ------------------ |
 |    anime    | Anime images / pfp . | `anyanime.anime()` |
+|    anime Gif    | Anime gif pfp . | `anyanime.animeGif()` |
 
 ## Functions
 
 ```javascript
 const anyanime = require("anyanime");
+
 await anyanime.anime();
+await anyanime.animeGif();
+
 anyanime.checkUpdate(true);
 ```
 
@@ -32,15 +36,20 @@ anyanime.checkUpdate(true);
 
 # Database
 
-- Database images size : 600
+- Png image database images size : 600
+- Gif image database images size : 100
 - The database size will be updated tho.
 
 ## Usage
 
 ```javascript
 const anyanime = require("anyanime");
+
 const anime = await anyanime.anime();
 console.log(anime); // Shows random anime pfp image.
+
+const animeGif = await anyanime.animeGif();
+console.log(animeGif); // Shows random anime gif pfp image.
 ```
 
 ## Discord Bot
@@ -59,10 +68,23 @@ client.on("messageCreate", async (message) => {
     message.channel.send({ embeds: [anime] });
   }
 
+  /* Gif Image */
+  if (message.content === "gif") {
+    const animeGif = await anyanime.animeGif();
+    message.channel.send({ embeds: [animeGif] });
+  }
+
   /* Embed Image (D.JS Version 13) */
   if (message.content === "embed") {
     const anime = await anyanime.anime();
     const embed = new Discord.MessageEmbed().setImage(anime);
+    message.channel.send({ embeds: [embed] });
+  }
+
+  /* Embed Gif Image (D.JS Version 13) */
+  if (message.content === "embed gif") {
+    const animeGif = await anyanime.animeGif();
+    const embed = new Discord.MessageEmbed().setImage(animeGif);
     message.channel.send({ embeds: [embed] });
   }
 });

@@ -69,11 +69,11 @@
                     <hr>
                     <p align="center">
                         <p align="center">
-                            What will change ?
+                            Recent Changes 
                         </p>
-                        - The API will be a little slower ig <br>
+                        - AnyAnime now supports Gif's <br>
+                        - AnyAnime is now hosted on replit <br>
                         - The downtime will be completely dependend on replit <br>
-        
                         <hr>
                         <p align="center" style="font-size: 15px; text-decoration: underline;">
                             However The npm package will be as it is so if you want better performance use the npm package instead of the api
@@ -105,6 +105,11 @@
                             &nbsp;&nbsp;<span class="console">console</span>.log(<span class="anime"><span class="require">await</span> <span class="pkg">anyanime</span>.anime()</span>); <br>
                             <span class="pkg">}</span> <br> <br>
 
+                            <span class="comment">// Anime Gif function</span> <br>
+                            <span class="const">async</span> <span class="pkg=">function main() {</span> <br>
+                            &nbsp;&nbsp;<span class="console">console</span>.log(<span class="anime"><span class="require">await</span> <span class="pkg">anyanime</span>.animeGif()</span>); <br>
+                            <span class="pkg">}</span> <br> <br>
+
                             <span class="comment">// Check for update</span> <br>
                             <span class="pkg">anyanime</span>.<span class="anime">checkUpdate(true);</span>
                             
@@ -125,11 +130,16 @@
                 <h2>Functions</h2>
                 <code>
                     <span class="const">const</span> <span class="pkg"> anyanime</span> = <span class="require">require</span>("<span class="pkg">anyanime</span>"); <br> <br>
+
+                    <span class="comment">// Get png anime image</span> <br>
+                    <span class="pkg">anyanime</span>.<span class="anime">anime();</span>
                     
-                    <span class="comment">// Anime function</span> <br>
-                    <span class="const">async</span> <span class="pkg=">function main() {</span> <br>
-                    &nbsp;&nbsp;<span class="console">console</span>.log(<span class="anime"><span class="require">await</span> <span class="pkg">anyanime</span>.anime()</span>); <br>
-                    <span class="pkg">}</span> <br> <br>
+                    <br>
+
+                    <span class="comment">// Get anime Gif</span> <br>
+                    <span class="pkg">anyanime</span>.<span class="anime">animeGif();</span>
+
+                    <br>
 
                     <span class="comment">// Check for update</span> <br>
                     <span class="pkg">anyanime</span>.<span class="anime">checkUpdate(true);</span>
@@ -146,8 +156,8 @@
 
                 <h2>Database</h2>
                 <p style="color:black;" class="written-stuff">
-                    Database images size : 600 <br>
-                    The database size will be updated tho.
+                    Png images : 600 <br>
+                    Gif images : 100 <br>
                 </p>
 
                 <h2>Usage</h2>
@@ -158,6 +168,11 @@
                         <span class="comment">// Anime function</span> <br>
                         <span class="const">async</span> <span class="pkg=">function main() {</span> <br>
                         &nbsp;&nbsp;<span class="console">console</span>.log(<span class="anime"><span class="require">await</span> <span class="pkg">anyanime</span>.anime()</span>); <br>
+                        <span class="pkg">}</span> <br>
+
+                        <span class="comment">// Anime Gif function</span> <br>
+                        <span class="const">async</span> <span class="pkg=">function main() {</span> <br>
+                        &nbsp;&nbsp;<span class="console">console</span>.log(<span class="anime"><span class="require">await</span> <span class="pkg">anyanime</span>.animeGif()</span>); <br>
                         <span class="pkg">}</span> <br>
                     </code>
                 </code>
@@ -181,12 +196,26 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="message">message</span>.<span class="channel">channel</span>.send({ embeds: [<span class="anime">anime</span>] }); <br>
                     &nbsp;&nbsp;} <br> <br>
 
+                    &nbsp;&nbsp;<span class="if">if</span> (<span class="message">message</span>.content === "plain") { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="const">const </span> <span class="anime">animeGif</span> = <span class="pkg"><span class="require">await</span> anyanime</span>.<span class="anime">animeGif();</span> <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="message">message</span>.<span class="channel">channel</span>.send({ embeds: [<span class="anime">animeGif</span>] }); <br>
+                    &nbsp;&nbsp;} <br> <br>
+
                     &nbsp;<span class="comment">/* Embed Image (D.JS Version 13) */ </span> <br>
 
                     &nbsp;&nbsp;<span class="if">if</span> (<span class="message">message</span>.content === "embed") { <br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="const">const </span> <span class="anime">anime</span> = <span class="pkg"><span class="require">await</span> anyanime</span>.<span class="anime">anime();</span> <br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="const">const </span> <span class="embed">embed</span> = <span class="new">new</span> Discord.MessageEmbed().setImage(<span
                         class="anime">anime</span>); <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="message">message</span>.<span class="channel">channel</span>.send({ embeds: [<span class="embed">embed</span>] }); <br>
+                    &nbsp;&nbsp;} <br>
+                    }); <br><br>
+
+
+                    &nbsp;&nbsp;<span class="if">if</span> (<span class="message">message</span>.content === "embed") { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="const">const </span> <span class="anime">animeGif</span> = <span class="pkg"><span class="require">await</span> anyanime</span>.<span class="anime">animeGif();</span> <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="const">const </span> <span class="embed">embed</span> = <span class="new">new</span> Discord.MessageEmbed().setImage(<span
+                        class="anime">animeGif</span>); <br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="message">message</span>.<span class="channel">channel</span>.send({ embeds: [<span class="embed">embed</span>] }); <br>
                     &nbsp;&nbsp;} <br>
                     }); <br><br>

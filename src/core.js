@@ -6,6 +6,13 @@ const AnyAnime = () => {
             return res.data.stuff[0].image
         },
         
+        animeGif: async () => {
+            if (!require('axios')) return;
+            const res = await require('axios').get('https://anyanime-api.kurizu.repl.co/anime/gif')
+            const src = res.data.split('"')[1];
+            return src;
+        },
+
         checkUpdate: async () => {
             if (!require('node-fetch')) return;
             const packageData = await require('node-fetch')(`https://registry.npmjs.com/anyanime`).then(text => text.json())

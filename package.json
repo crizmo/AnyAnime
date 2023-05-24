@@ -1,7 +1,7 @@
 {
   "name": "anyanime",
   "version": "1.2.40",
-  "description": "Generate random anime images / pfp .",
+  "description": "Get random anime images / gifs using the AnyAnime npm package / API",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,14 +13,15 @@
   },
   "keywords": [
     "anime",
-    "generator",
     "pfp",
     "discord",
     "bot",
-    "image",
     "random",
     "random-pfp",
-    "discord-bot"
+    "discord-bot",
+    "png",
+    "gif",
+    "api"
   ],
   "author": "Criz",
   "license": "MIT"

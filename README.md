@@ -107,7 +107,7 @@ If you dont want to use the npm package you can use the api instead.
 
 The installation is given in the [readMe](https://github.com/crizmo/AnyAnime_api/blob/main/README.md) file !
 
-Package Made by: `Kurizu#1270`
+Package Made by: `kurizu.taz` on discord.
 
 ## Huge Thanks To Pinterest.
 

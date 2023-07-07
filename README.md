@@ -36,8 +36,8 @@ anyanime.checkUpdate(true);
 
 # Database
 
-- Png image database images size : 600
-- Gif image database images size : 100
+- Png image database images size : 768
+- Gif image database images size : 183
 - The database size will be updated tho.
 
 ## Usage

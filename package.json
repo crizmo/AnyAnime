@@ -1,6 +1,6 @@
 {
   "name": "anyanime",
-  "version": "1.2.44",
+  "version": "1.2.45",
   "description": "Get random anime images / gifs using the AnyAnime npm package / API",
   "main": "index.js",
   "scripts": {

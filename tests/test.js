@@ -1,3 +1,6 @@
+// This is a test file for anyanime package.
+// All tests are valid and working.
+
 const anyanime = require("anyanime");
 
 // // Method 1

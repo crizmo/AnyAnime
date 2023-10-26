@@ -20,14 +20,17 @@ $ npm install anyanime
 | :---------: | -------------------- | ------------------ |
 |    anime    | Anime images / pfp . | `anyanime.anime()` |
 |    anime Gif    | Anime gif pfp . | `anyanime.animeGif()` |
+|    checkUpdate    | Check for new npm package updates. | `anyanime.checkUpdate(true)` |
 
 ## Functions
 
 ```javascript
 const anyanime = require("anyanime");
 
-await anyanime.anime();
-await anyanime.animeGif();
+anyanime.anime().then(console.log); // Shows random anime pfp image.
+anyanime.animeGif().then(console.log); // Shows random anime gif pfp image.
+
+// Both are async functions because it fetches the images from AnyAnime Api and that might take some time.
 
 anyanime.checkUpdate(true);
 ```
@@ -45,11 +48,15 @@ anyanime.checkUpdate(true);
 ```javascript
 const anyanime = require("anyanime");
 
-const anime = await anyanime.anime();
-console.log(anime); // Shows random anime pfp image.
+async function anime() {
+    const anime = await anyanime.anime();
+    console.log(anime); // Shows random anime pfp image.
 
-const animeGif = await anyanime.animeGif();
-console.log(animeGif); // Shows random anime gif pfp image.
+    const animeGif = await anyanime.animeGif();
+    console.log(animeGif); // Shows random anime gif pfp image.
+}
+// Both are async functions because it fetches the images from AnyAnime Api and that might take some time.
+anime();
 ```
 
 ## Discord Bot

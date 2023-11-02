@@ -1,25 +1,25 @@
 // This is a test file for anyanime package.
 // All tests are valid and working.
 
-const anyanime = require("anyanime");
+// const anyanime = require("anyanime");
+const anyanime = require("../index");
 
-// // Method 1
+// Method 1
 async function anime() {
-    const anime = await anyanime.anime();
-    console.log(anime); // Shows random anime pfp image.
-
-    const animeGif = await anyanime.animeGif();
-    console.log(animeGif); // Shows random anime gif pfp image.
+    const anime = await anyanime.getAnime({ type: "png", number: 1 });
+    console.log(anime[0]); 
 }
 
 anime();
 
-// // Method 2
-async function main() {
-    console.log(await anyanime.anime());
-}
-
-main();
+// Method 2
+anyanime.getAnime({ type: "png", number: 1 }).then(anime => {
+    console.log(anime[0]);
+});
 
 // Method 3
-anyanime.anime().then(console.log);
+anyanime.getAnime({ type: "png", number: 1 }).then(anime => {
+    console.log(anime[0]);
+}).catch(err => {
+    console.log(err);
+});

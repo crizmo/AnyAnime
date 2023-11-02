@@ -1,3 +1,6 @@
+# Note changes are not yet pushed
+
+
 <p align="center">
   <a href="https://www.npmjs.com/package/anyanime">
     <img src="https://media.discordapp.net/attachments/939799133177384993/952452069686644746/Anyanime.png?width=1279&height=196" alt="Any Anime">
@@ -16,19 +19,23 @@ $ npm install anyanime
 
 ## Options
 
-| **Options** | **Description**      | **Usage**          |
-| :---------: | -------------------- | ------------------ |
-|    anime    | Anime images / pfp . | `anyanime.anime()` |
-|    anime Gif    | Anime gif pfp . | `anyanime.animeGif()` |
-|    checkUpdate    | Check for new npm package updates. | `anyanime.checkUpdate(true)` |
+| **Options** | **Description**      | **Usage**          | **Params** |
+| :---------: | -------------------- | ------------------ | ---------- |
+|    getAnime    | Anime images - png / gif | `anyanime.getAnime({})` | `{ type: "png", number: 10 }` |
+|    checkUpdate    | Check for new npm package updates. | `anyanime.checkUpdate(true)` | `true or false` |
+
+By default the type is png and number is 1.
+Max number of images you can ask for at a time is 10.
 
 ## Functions
 
 ```javascript
 const anyanime = require("anyanime");
 
-anyanime.anime().then(console.log); // Shows random anime pfp image.
-anyanime.animeGif().then(console.log); // Shows random anime gif pfp image.
+anyanime.getAnime({}).then(console.log); // Shows 1 random anime pfp image.
+
+anyanime.getAnime({ type: "png", number: 10 }).then(console.log); // Shows 10 random anime pfp images.
+anyanime.getAnime({ type: "gif", number: 10 }).then(console.log); // Shows 10 random anime gif pfp images.
 
 // Both are async functions because it fetches the images from AnyAnime Api and that might take some time.
 
@@ -49,15 +56,16 @@ anyanime.checkUpdate(true);
 const anyanime = require("anyanime");
 
 async function anime() {
-    const anime = await anyanime.anime();
-    console.log(anime); // Shows random anime pfp image.
+    const anime = await anyanime.getAnime({ type: "png", number: 1 });
+    console.log(anime); 
 
-    const animeGif = await anyanime.animeGif();
-    console.log(animeGif); // Shows random anime gif pfp image.
+    // by default the type is png and number is 1.
 }
 // Both are async functions because it fetches the images from AnyAnime Api and that might take some time.
 anime();
 ```
+
+Check the tests/test.js file for more examples. [Click here](https://github.com/crizmo/AnyAnime/blob/main/tests/test.js) to go to the file.
 
 ## Discord Bot
 
@@ -71,27 +79,27 @@ anyanime.checkUpdate(true);
 client.on("messageCreate", async (message) => {
   /* Plain Image */
   if (message.content === "plain") {
-    const anime = await anyanime.anime();
-    message.channel.send({ embeds: [anime] });
+    const anime = await anyanime.getAnime({ type: "png", number: 1 });
+    message.channel.send({ embeds: [anime[0]] });
   }
 
   /* Gif Image */
   if (message.content === "gif") {
-    const animeGif = await anyanime.animeGif();
-    message.channel.send({ embeds: [animeGif] });
+    const animeGif = await anyanime.getAnime({ type: "gif", number: 1 });
+    message.channel.send({ embeds: [animeGif[0]] });
   }
 
   /* Embed Image (D.JS Version 13) */
   if (message.content === "embed") {
-    const anime = await anyanime.anime();
-    const embed = new Discord.MessageEmbed().setImage(anime);
+    const anime = await anyanime.getAnime({ type: "png", number: 1 });
+    const embed = new Discord.MessageEmbed().setImage(anime[0]);
     message.channel.send({ embeds: [embed] });
   }
 
   /* Embed Gif Image (D.JS Version 13) */
   if (message.content === "embed gif") {
-    const animeGif = await anyanime.animeGif();
-    const embed = new Discord.MessageEmbed().setImage(animeGif);
+    const animeGif = await anyanime.getAnime({ type: "gif", number: 1 });
+    const embed = new Discord.MessageEmbed().setImage(animeGif[0]);
     message.channel.send({ embeds: [embed] });
   }
 });

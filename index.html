@@ -102,12 +102,12 @@
                             
                             <span class="comment">// Anime function</span> <br>
                             <span class="const">async</span> <span class="pkg=">function main() {</span> <br>
-                            &nbsp;&nbsp;<span class="console">console</span>.log(<span class="anime"><span class="require">await</span> <span class="pkg">anyanime</span>.anime()</span>); <br>
+                            &nbsp;&nbsp;<span class="console">console</span>.log(<span class="anime"><span class="require">await</span> <span class="pkg">anyanime</span>.getAnime({})</span>); <br>
                             <span class="pkg">}</span> <br> <br>
 
                             <span class="comment">// Anime Gif function</span> <br>
                             <span class="const">async</span> <span class="pkg=">function main() {</span> <br>
-                            &nbsp;&nbsp;<span class="console">console</span>.log(<span class="anime"><span class="require">await</span> <span class="pkg">anyanime</span>.animeGif()</span>); <br>
+                            &nbsp;&nbsp;<span class="console">console</span>.log(<span class="anime"><span class="require">await</span> <span class="pkg">anyanime</span>.getAnime({ type: "png", number: 10 })</span>); <br>
                             <span class="pkg">}</span> <br> <br>
 
                             <span class="comment">// Check for update</span> <br>
@@ -132,12 +132,12 @@
                     <span class="const">const</span> <span class="pkg"> anyanime</span> = <span class="require">require</span>("<span class="pkg">anyanime</span>"); <br> <br>
 
                     <span class="comment">// Get png anime image</span> <br>
-                    <span class="pkg">anyanime</span>.<span class="anime">anime();</span>
+                    <span class="pkg">anyanime</span>.<span class="anime">getAnime({ type: "png", number: 1 })</span>
                     
                     <br>
 
                     <span class="comment">// Get anime Gif</span> <br>
-                    <span class="pkg">anyanime</span>.<span class="anime">animeGif();</span>
+                    <span class="pkg">anyanime</span>.<span class="anime">getAnime({ type: "gif", number: 10 })</span>
 
                     <br>
 
@@ -167,12 +167,12 @@
                         
                         <span class="comment">// Anime function</span> <br>
                         <span class="const">async</span> <span class="pkg=">function main() {</span> <br>
-                        &nbsp;&nbsp;<span class="console">console</span>.log(<span class="anime"><span class="require">await</span> <span class="pkg">anyanime</span>.anime()</span>); <br>
+                        &nbsp;&nbsp;<span class="console">console</span>.log(<span class="anime"><span class="require">await</span> <span class="pkg">anyanime</span>.getAnime({ type: "png", number: 1 })</span>); <br>
                         <span class="pkg">}</span> <br>
 
                         <span class="comment">// Anime Gif function</span> <br>
                         <span class="const">async</span> <span class="pkg=">function main() {</span> <br>
-                        &nbsp;&nbsp;<span class="console">console</span>.log(<span class="anime"><span class="require">await</span> <span class="pkg">anyanime</span>.animeGif()</span>); <br>
+                        &nbsp;&nbsp;<span class="console">console</span>.log(<span class="anime"><span class="require">await</span> <span class="pkg">anyanime</span>.getAnime({ type: "gif", number: 1 })</span>); <br>
                         <span class="pkg">}</span> <br>
                     </code>
                 </code>
@@ -192,45 +192,35 @@
                     &nbsp;<span class="comment">/* Plain Image */ </span> <br>
 
                     &nbsp;&nbsp;<span class="if">if</span> (<span class="message">message</span>.content === "plain") { <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="const">const </span> <span class="anime">anime</span> = <span class="pkg"><span class="require">await</span> anyanime</span>.<span class="anime">anime();</span> <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="message">message</span>.<span class="channel">channel</span>.send({ embeds: [<span class="anime">anime</span>] }); <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="const">const </span> <span class="anime">anime</span> = <span class="pkg"><span class="require">await</span> anyanime</span>.<span class="anime">getAnime({ type: "png", number: 1 })</span> <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="message">message</span>.<span class="channel">channel</span>.send({ embeds: [<span class="anime">anime[0]</span>] }); <br>
                     &nbsp;&nbsp;} <br> <br>
 
                     &nbsp;&nbsp;<span class="if">if</span> (<span class="message">message</span>.content === "plain") { <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="const">const </span> <span class="anime">animeGif</span> = <span class="pkg"><span class="require">await</span> anyanime</span>.<span class="anime">animeGif();</span> <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="message">message</span>.<span class="channel">channel</span>.send({ embeds: [<span class="anime">animeGif</span>] }); <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="const">const </span> <span class="anime">animeGif</span> = <span class="pkg"><span class="require">await</span> anyanime</span>.<span class="anime">getAnime({ type: "gif", number: 1 })</span> <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="message">message</span>.<span class="channel">channel</span>.send({ embeds: [<span class="anime">animeGif[0]</span>] }); <br>
                     &nbsp;&nbsp;} <br> <br>
 
                     &nbsp;<span class="comment">/* Embed Image (D.JS Version 13) */ </span> <br>
 
                     &nbsp;&nbsp;<span class="if">if</span> (<span class="message">message</span>.content === "embed") { <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="const">const </span> <span class="anime">anime</span> = <span class="pkg"><span class="require">await</span> anyanime</span>.<span class="anime">anime();</span> <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="const">const </span> <span class="anime">anime</span> = <span class="pkg"><span class="require">await</span> anyanime</span>.<span class="anime">getAnime({ type: "png", number: 1 })</span> <br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="const">const </span> <span class="embed">embed</span> = <span class="new">new</span> Discord.MessageEmbed().setImage(<span
-                        class="anime">anime</span>); <br>
+                        class="anime">anime[0]</span>); <br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="message">message</span>.<span class="channel">channel</span>.send({ embeds: [<span class="embed">embed</span>] }); <br>
                     &nbsp;&nbsp;} <br>
                     }); <br><br>
 
 
                     &nbsp;&nbsp;<span class="if">if</span> (<span class="message">message</span>.content === "embed") { <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="const">const </span> <span class="anime">animeGif</span> = <span class="pkg"><span class="require">await</span> anyanime</span>.<span class="anime">animeGif();</span> <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="const">const </span> <span class="anime">animeGif</span> = <span class="pkg"><span class="require">await</span> anyanime</span>.<span class="anime">getAnime({ type: "gif", number: 1 })</span> <br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="const">const </span> <span class="embed">embed</span> = <span class="new">new</span> Discord.MessageEmbed().setImage(<span
-                        class="anime">animeGif</span>); <br>
+                        class="anime">animeGif[0]</span>); <br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="message">message</span>.<span class="channel">channel</span>.send({ embeds: [<span class="embed">embed</span>] }); <br>
                     &nbsp;&nbsp;} <br>
                     }); <br><br>
 
                     <span class="client">client</span>.<span class="login">login</span>("<span class="message">TOKEN</span>");
-                </code>
-
-                <h2>Fore more info check !</h2>
-                <code>
-
-                    <div class="links">
-                        <a href="https://github.com/crizmo/Elina-dev/blob/main/commands/fun/animepfp.js">Prefix Usage</a>
-                        <br>
-                        <a href="https://github.com/crizmo/Elina-dev/blob/main/src/slash/fun/anyanime.js">Slash Usage</a>
-                    </div>
                 </code>
 
                 <h2>AnyAnime Api</h2>

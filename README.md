@@ -114,7 +114,7 @@ client.login("TOKEN");
 If you dont want to use the npm package you can use the api instead.
 
 - [Rapid Api](https://rapidapi.com/Kurizu/api/any-anime/)
-- [Replit](https://anyanime-api.kurizu.repl.co/)
+- [Vercel](https://any-anime-api.vercel.app/)
 - [Github](https://github.com/crizmo/AnyAnime_api)
 
 The installation is given in the [readMe](https://github.com/crizmo/AnyAnime_api/blob/main/README.md) file !

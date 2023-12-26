@@ -9,7 +9,7 @@ const AnyAnime = () => {
             if (typeof number !== 'number') throw new Error('Number must be a number');
             if (number > 10) throw new Error('Number must be less than 10');
 
-            const res = await axios.get(`https://anyanime-api.kurizu.repl.co/v1/anime/${type}/${number}`);
+            const res = await axios.get(`https://any-anime-api.vercel.app/v1/anime/${type}/${number}`);
             return res.data.images;
         },
 

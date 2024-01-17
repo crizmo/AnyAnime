@@ -14,8 +14,8 @@ const AnyAnime = () => {
         },
 
         checkUpdate: async () => {
-            if (!require('node-fetch')) return;
-            const packageData = await require('node-fetch')(`https://registry.npmjs.com/anyanime`).then(text => text.json())
+            const axios = require('axios');
+            const packageData = await axios.get(`https://registry.npmjs.com/anyanime`).then(text => text.data)
             if (require('../package.json').version !== packageData['dist-tags'].latest) {
                 console.log('\n\n');
                 console.log('\x1b[32m' + '---------------------------------------------------');

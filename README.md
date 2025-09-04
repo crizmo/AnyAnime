@@ -1,15 +1,19 @@
 <p align="center">
   <a href="https://www.npmjs.com/package/anyanime">
-    <img src="https://media.discordapp.net/attachments/939799133177384993/952452069686644746/Anyanime.png?width=1279&height=196" alt="Any Anime">
+    <img src="https://cdn.pfps.gg/banners/5480-dark-aesthetic-anime.png" alt="Any Anime">
   </a>
 </p>
 <p align="center">
   <a href="https://www.npmjs.com/package/anyanime"><img src="https://img.shields.io/npm/v/anyanime.svg?maxAge=3600" alt="NPM version" /></a>
 </p>
 <h3 align="center"><strong>Get random anime images / pfp.</strong></h3>
+<p align="center">
+  <a href="https://ko-fi.com/kurizu" target="_blank">
+    <img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Support me on Ko-fi" />
+  </a>
+</p>
 
 ## Installation
-
 ```bash
 $ npm install anyanime
 ```
@@ -119,7 +123,7 @@ If you dont want to use the npm package you can use the api instead.
 
 The installation is given in the [readMe](https://github.com/crizmo/AnyAnime_api/blob/main/README.md) file !
 
-Package Made by: `kurizu.taz` on discord.
+Package Made by: `x_kurizu` on discord.
 
 ## Huge Thanks To Pinterest.
 
